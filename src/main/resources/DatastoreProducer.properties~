@@ -1,0 +1,3 @@
+dbName=chatrepo
+mapPackage=com.grindr.core.chat.model
+dbHost=${mongo.replset}
