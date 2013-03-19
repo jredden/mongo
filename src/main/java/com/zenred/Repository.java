@@ -7,23 +7,23 @@ import com.zenred.RepositoryException;
 
 /**
  * Repository interface for type-safe CRUD operations
- * @param <PK>
- * @param <T>
+ * @param <PrimaryKey>
+ * @param <AnObject>
  * 
  * @category interface
  * 
  */
-public interface Repository <PK extends Serializable, T> {
+public interface Repository <PrimaryKey extends Serializable, AnObject> {
 
-	public void create(T obj) throws RepositoryException;
+	public void create(AnObject obj) throws RepositoryException;
 	
-	public T read(PK id) throws RepositoryException;
+	public AnObject read(PrimaryKey id) throws RepositoryException;
 	
-	public void update(T obj) throws RepositoryException;
+	public void update(AnObject obj) throws RepositoryException;
 	
-	public void delete(T obj) throws RepositoryException;
+	public void delete(AnObject obj) throws RepositoryException;
 	
-	public List<T> findAll() throws RepositoryException;
+	public List<AnObject> findAll() throws RepositoryException;
 	
 	
 	
